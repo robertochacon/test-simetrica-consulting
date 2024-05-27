@@ -1,2 +1,9 @@
 <app-toolbar></app-toolbar>
 <h1>Usuarios</h1>
+
+<div *ngIf="ListUser">
+  <pre>{{ ListUser | json }}</pre>
+</div>
+<div *ngIf="!ListUser">
+  <p>Loading data...</p>
+</div>
