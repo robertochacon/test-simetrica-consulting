@@ -1,0 +1,57 @@
+* {
+  font-family: Poppins, "sans-serif";
+  background-color: darkgrey;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  border: 5px solid darkslategrey;
+  width: 80%;
+  max-width: 400px; /* para limitar el ancho en pantallas grandes */
+  padding: 20px;
+  margin-top: 10%; /* reduce el margen superior */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.logo {
+  max-width: 100px; /* ajusta el tamaño según tus necesidades */
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 25px;
+  text-align: center;
+  color: var(--text-dark);
+}
+
+h4 {
+  font-weight: 300;
+  font-size: 17px;
+  text-align: center;
+  color: var(--text-gray);
+}
+
+mat-form-field {
+  width: 100%; /* ajusta el ancho al 100% del contenedor */
+}
+
+button {
+  width: 100%; /* ajusta el ancho al 100% del contenedor */
+  height: 55px;
+  margin-top: 20px; /* agrega margen superior para separación */
+}
+
+.forgot {
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  color: var(--hyperlink-blue);
+  cursor: pointer;
+  margin-top: 10px; /* agrega margen superior para separación */
+}

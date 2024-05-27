@@ -1,0 +1,18 @@
+<div class="container animate__animated animate__fadeIn">
+  <img src="https://cdn-icons-png.flaticon.com/512/5238/5238442.png" alt="Logo" class="logo">
+  <h2 class="noselect">Bienvenido al test de Roberto</h2>
+  <h4 class="noselect">Ingresa tus credenciales para continuar</h4>
+  <br>
+  <h2 class="noselect">Iniciar Sesión</h2>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="outline">
+      <mat-label>Usuario</mat-label>
+      <input matInput placeholder="Username" formControlName="username" [value]="'username'">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Contraseña</mat-label>
+      <input type="password" matInput placeholder="Ingrese su contraseña" formControlName="password" [value]="'password'">
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">Iniciar Sesión</button>
+  </form>
+</div>
