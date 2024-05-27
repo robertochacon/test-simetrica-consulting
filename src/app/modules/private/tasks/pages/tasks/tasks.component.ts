@@ -9,6 +9,7 @@ import { TaskService } from 'src/app/core/services/task.service';
 export class TasksComponent implements OnInit {
 
   ListTasks:any[] = [];
+  arrayColumns: string[] = ['id'];
 
   constructor( private tasksService: TaskService) { }
 

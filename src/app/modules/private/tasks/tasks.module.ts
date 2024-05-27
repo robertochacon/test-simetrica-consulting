@@ -6,6 +6,9 @@ import { TasksComponent } from './pages/tasks/tasks.component';
 import { ToolbarModule } from '../toolbar/toolbar.module';
 import {MatListModule} from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,11 @@ import {MatCardModule} from '@angular/material/card';
     TasksRoutingModule,
     ToolbarModule,
     MatListModule,
-    MatCardModule
+    MatCardModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
+
   ]
 })
 export class TasksModule { }
