@@ -19,7 +19,7 @@
         <tr *ngFor="let task of ListTasks">
           <td>{{task.id}}</td>
           <td>{{task.todo | titlecase}}</td>
-          <td>{{task.complete}}</td>
+          <td>{{ getStatus(task.complete) }}</td>
         </tr>
       </tbody>
     </table>

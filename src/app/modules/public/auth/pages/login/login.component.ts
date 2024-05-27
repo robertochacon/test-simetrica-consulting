@@ -32,20 +32,19 @@ export class LoginComponent implements OnInit {
 
             const Token = response.token;
 
-            // localStorage.setItem('name', `${response.firstName} ${response.lastName}`)
             localStorage.setItem('token', Token);
+            localStorage.setItem('name', this.loginForm.value.username);
             this.router.navigate(['/dashboard'])
           },
           error: (err) => {
-            console.log('erro:r'+err);
 
             if (err.error){
               Swal.fire({
                 icon: 'error',
-                title: 'Ups... ha ocurrido un error',
+                title: 'Problemas tecnicos, intenta mas tarde.',
                 text: err.error.msg,
                 showCancelButton: true,
-                confirmButtonText: "Ok"
+                confirmButtonText: "Continuar"
               });
             }
 

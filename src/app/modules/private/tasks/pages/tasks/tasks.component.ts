@@ -22,4 +22,8 @@ export class TasksComponent implements OnInit {
     })
   }
 
+  getStatus(val:boolean){
+    return val ? 'Complete' : 'Incomplete'
+  }
+
 }
