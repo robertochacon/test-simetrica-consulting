@@ -1,4 +1,4 @@
-<mat-toolbar color="secondary" class="animate__animated animate__bounceInDown">
+<mat-toolbar color="secondary">
   <button mat-icon-button (click)="sidenav.toggle()" id="menuIcon" aria-label="Example icon-button with menu icon">
       <mat-icon>menu</mat-icon>
   </button>
@@ -6,7 +6,7 @@
   <a mat-button routerLink="/dashboard" class="top-menu-item"><mat-icon>home</mat-icon>Dashboard</a>
   <a mat-button routerLink="/users" class="top-menu-item"><mat-icon>people</mat-icon>Usuarios</a>
   <a mat-button routerLink="/tasks" class="top-menu-item"><mat-icon>task_add</mat-icon>Tareas</a>
-  <a mat-button routerLink="/" class="top-menu-item"><mat-icon>logout</mat-icon>Salir</a>
+  <a mat-button routerLink="/" (click)="logout()" class="top-menu-item"><mat-icon>logout</mat-icon>Salir</a>
 </mat-toolbar>
 
 <mat-sidenav-container>

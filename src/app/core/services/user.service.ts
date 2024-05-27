@@ -13,13 +13,6 @@ export class UserService {
 
   constructor(private http: HttpClient) {}
 
-  // getUsers(): Observable<User[]> {
-  //   return of([
-  //     { id: 1, name: 'User One', email: 'user1@gmail.com', phone: '809-898-2342' },
-  //     { id: 2, name: 'User Two', email: 'user2@gmail.com', phone: '829-898-7283' }
-  //   ]);
-  // }
-
   getAllUsers(): Observable<any> {
     return this.http.get<User>(this.apiUrl + '/users');
   }

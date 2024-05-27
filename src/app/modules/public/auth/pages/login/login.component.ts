@@ -1,3 +1,4 @@
+import { Token } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -29,7 +30,10 @@ export class LoginComponent implements OnInit {
         .subscribe({
           next: (response) => {
 
+            const Token = response.token;
+
             // localStorage.setItem('name', `${response.firstName} ${response.lastName}`)
+            localStorage.setItem('token', Token);
             this.router.navigate(['/dashboard'])
           },
           error: (err) => {

@@ -1,9 +1,33 @@
 <app-toolbar></app-toolbar>
-<h1>Usuarios</h1>
 
-<div *ngIf="ListUser">
-  <pre>{{ ListUser | json }}</pre>
-</div>
-<div *ngIf="!ListUser">
-  <p>Loading data...</p>
-</div>
+<mat-card class="content">
+  <mat-card-header>
+    <mat-card-title class="title"><h1>Usuarios</h1></mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Apellido</th>
+          <th scope="col">Edad</th>
+          <th scope="col">Telefono</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of ListUser">
+          <td>{{user.id}}</td>
+          <td>{{user.firstName | titlecase}}</td>
+          <td>{{user.lastName}}</td>
+          <td>{{user.age}}</td>
+          <td>{{user.phone | titlecase}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</mat-card-content>
+</mat-card>

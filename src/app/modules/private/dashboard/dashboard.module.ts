@@ -12,6 +12,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { ToolbarModule } from '../toolbar/toolbar.module';
 
+import {MatCardModule} from '@angular/material/card';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { ToolbarModule } from '../toolbar/toolbar.module';
     MatMenuModule,
     MatButtonModule,
     MatSidenavModule,
-    ToolbarModule
+    ToolbarModule,
+    MatCardModule
   ]
 })
 export class DashboardModule { }

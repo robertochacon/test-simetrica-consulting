@@ -1,0 +1,32 @@
+
+table thead{
+  background-color: steelblue !important;
+}
+table th {
+  text-align: left;
+  padding: 8px;
+  background: #212121;
+}
+.content{
+  margin: 10px;
+  padding: 20px;
+  background: white;
+}
+.title{
+  color: black;
+}
+
+/* Estilo para la tabla */
+table {
+  background-color: darkgrey;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Estilo para los bordes */
+table, th, td {
+  border: 1px solid #212121;
+  text-align: left;
+  padding: 8px;
+}
+

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TaskService } from 'src/app/core/services/task.service';
 
 @Component({
   selector: 'app-tasks',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TasksComponent implements OnInit {
 
-  constructor() { }
+  ListTasks:any[] = [];
+
+  constructor( private tasksService: TaskService) { }
 
   ngOnInit(): void {
+    this.getAllTasks();
+  }
+
+  getAllTasks() {
+      this.tasksService.getAllTasks().subscribe( tasks => {
+        this.ListTasks = tasks.todos;
+    })
   }
 
 }

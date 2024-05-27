@@ -3,13 +3,13 @@
   <h2 class="noselect">Bienvenido al test de Roberto</h2>
   <h4 class="noselect">Ingresa tus credenciales para continuar</h4>
   <br>
-  <h2 class="noselect">Iniciar Sesión</h2>
+  <!-- <h2 class="noselect">Iniciar Sesión</h2> -->
   <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-    <mat-form-field appearance="outline">
+    <mat-form-field appearance="fill">
       <mat-label>Usuario</mat-label>
       <input matInput placeholder="Username" formControlName="username" [value]="'username'">
     </mat-form-field>
-    <mat-form-field appearance="outline">
+    <mat-form-field appearance="fill">
       <mat-label>Contraseña</mat-label>
       <input type="password" matInput placeholder="Ingrese su contraseña" formControlName="password" [value]="'password'">
     </mat-form-field>

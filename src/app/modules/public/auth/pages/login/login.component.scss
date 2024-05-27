@@ -1,6 +1,6 @@
 * {
   font-family: Poppins, "sans-serif";
-  background-color: darkgrey;
+  background-color: #212121;
 }
 
 .container {
@@ -9,11 +9,11 @@
   align-items: center;
   justify-content: center;
   margin: auto;
-  border: 5px solid darkslategrey;
+  border: 5px solid #212121;
   width: 80%;
   max-width: 400px; /* para limitar el ancho en pantallas grandes */
   padding: 20px;
-  margin-top: 10%; /* reduce el margen superior */
+  margin-top: 5%; /* reduce el margen superior */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
 }
@@ -54,4 +54,23 @@ button {
   color: var(--hyperlink-blue);
   cursor: pointer;
   margin-top: 10px; /* agrega margen superior para separación */
+}
+
+.noselect{
+  color: white;
+}
+
+input{
+  color: white;
+  font-size: 20px;
+}
+
+input:focus{
+  color: white;
+}
+
+/* Estilo cuando se hace clic */
+input.clicked {
+  background-color: #ff5722; /* Cambia esto al color que desees */
+  color: white; /* Asegúrate de que el texto sea legible */
 }
