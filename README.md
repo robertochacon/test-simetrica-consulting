@@ -1,27 +1,58 @@
 # TestSimetricaConsulting
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.6.
+## Descripción del Proyecto
 
-## Development server
+Desarrollo una aplicación web frontend utilizando Angular 17 que simule la gestión de usuarios y tareas. La aplicación debe hacer uso de los environments de Angular para compilar a diferentes ambientes (dev, qa, prod), utilizar SOLID principles, autenticación con JWT, HTTP para las solicitudes de datos mockeados, Angular Material para el CSS, ser responsive, implementar lazy loading y tener un código limpio y bien organizado que haga uso de interfaces, enumerables, entre otros. Además, se requiere el uso de Jest para las pruebas unitarias.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+En este caso estoy usando algunas apis de 
+<https://dummyjson.com/docs> que me permiten autenticarme y consumir informacion de usuario y tareas.
 
-## Code scaffolding
+Desplegue el proyecto en netlify al cual pueden acceder con el siguiente enlace: <https://test-sc-roberto-chacon.netlify.app>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Requisitos Previos
+Node.js y npm: Asegúrate de tener Node.js y npm instalados. Puedes descargarlo e instalarlo desde nodejs.org.
 
-## Build
+Angular CLI: Instala Angular CLI globalmente si no lo tienes ya instalado. Puedes hacerlo ejecutando el siguiente comando en tu terminal:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+`npm install -g @angular/cli`
 
-## Running unit tests
+## Pasos para bajar y correr el proyecto
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Clonar el Repositorio: Abre tu terminal y clona el repositorio del proyecto desde GitHub usando el comando git clone y la url del repositorio.
 
-## Running end-to-end tests
+`git clone https://github.com/robertochacon/test-simetrica-consulting`
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Navegar al Directorio del Proyecto: Cambia el directorio a la carpeta del proyecto recién clonado.
 
-## Further help
+`cd proyecto-angular`
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Instalar Dependencias: Ejecuta el siguiente comando para instalar las dependencias del proyecto listadas en el archivo package.json.
+
+`npm install`
+
+Ejecutar el Proyecto: Una vez que las dependencias se han instalado, puedes ejecutar el proyecto con el siguiente comando:
+
+## Entornos y acceso al Proyecto
+
+### Entornos/Ambientes
+
+- #### LOCAL
+`ng serve`
+- #### QA
+`ng serve --configuration=qa`
+- #### PRODUCCION
+`ng serve --configuration=production`
+
+La url declarada en los entornos apuntan a la misma url. El objetivo principal se enfoca en el uso de diferentes ambientes.
+
+Abrir la siguiente url en el navegador  [http://localhost:4200](http://localhost:4200) 
+
+
+## Ejecutar pruebas unitarias
+
+Para la ejecucion de las pruebas unitarias utilizando Jest ejecutar el sigiente comando en la consola: 
+
+`ng test`
+
+- #### Nota: las pruebas unitarias aun no estan listas.
+
