@@ -1,27 +1,36 @@
-import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
-import { User } from 'src/app/core/models/user.model';
+import { Component, OnInit, AfterViewInit, ViewChild } from '@angular/core';
 import { UserService } from 'src/app/core/services/user.service';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatTableDataSource } from '@angular/material/table';
+import { User } from 'src/app/core/models/user.model';
 
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',
   styleUrls: ['./users.component.scss']
 })
-export class UsersComponent implements OnInit {
+export class UsersComponent implements OnInit, AfterViewInit {
 
-  ListUser:any[] = [];
+  arrayColumns: string[] = ['id', 'firstName', 'lastName', 'age', 'phone'];
+  dataSource = new MatTableDataSource<User>();
+  isLoading = true;
 
-  constructor( private userService: UserService) { }
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
+
+  constructor(private userService: UserService) { }
 
   ngOnInit(): void {
     this.getAllUsers();
   }
 
-  getAllUsers() {
-      this.userService.getAllUsers().subscribe( users => {
-        this.ListUser = users.users;
-    })
+  ngAfterViewInit() {
+    this.dataSource.paginator = this.paginator;
   }
 
+  getAllUsers() {
+    this.userService.getAllUsers().subscribe(users => {
+      this.dataSource.data = users.users;
+      this.isLoading = false;
+    });
+  }
 }
