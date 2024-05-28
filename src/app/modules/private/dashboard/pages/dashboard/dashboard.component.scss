@@ -1,4 +1,5 @@
 .content{
+  margin-top: 80px !important;
   margin: 10px;
   padding: 20px;
   // background: white;
@@ -6,4 +7,16 @@
 .title{
   color: white;
 }
+
+.image{
+  margin: auto;
+  width: 300px;
+}
+
+@media screen and (max-width: 600px) {
+  .image{
+    width: 90%;
+  }
+}
+
 

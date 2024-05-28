@@ -1,4 +1,4 @@
-<mat-toolbar color="secondary">
+<mat-toolbar color="secondary" class="menu">
   <button mat-icon-button (click)="sidenav.toggle()" id="menuIcon" aria-label="Example icon-button with menu icon">
       <mat-icon>menu</mat-icon>
   </button>
@@ -10,7 +10,7 @@
 </mat-toolbar>
 
 <mat-sidenav-container>
-  <mat-sidenav #sidenav [fixedInViewport]="true" [fixedTopGap]="60" mode="side">
+  <mat-sidenav #sidenav [fixedInViewport]="true" [fixedTopGap]="80" mode="side">
       <div class="side-nav-items">
           <div>
               <a routerLink="/dashboard" mat-button class="side-menu-item"><mat-icon>home</mat-icon>Dashboard</a>

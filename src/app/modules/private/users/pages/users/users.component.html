@@ -6,9 +6,9 @@
   </mat-card-header>
   <mat-card-content>
 
-      <div class="animate__animated animate__fadeIn">
+      <div class="animate__animated animate__fadeIn container-table">
 
-        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
 
           <!-- ID Column -->
           <ng-container matColumnDef="id">

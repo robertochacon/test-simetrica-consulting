@@ -7,11 +7,15 @@
   padding: 40px;
   box-sizing: border-box;
   height: 60px;
+  position: fixed;
+  z-index: 1;
 }
 
 .mat-sidenav {
   background-color: #3F51B5;
   width: 160px;
+  position: fixed;
+  z-index: 1;
 }
 
 .side-nav-items {

@@ -8,6 +8,7 @@ table th {
   background: #212121;
 }
 .content{
+  margin-top: 70px !important;
   margin: 10px;
   padding: 20px;
   background: white;
@@ -20,7 +21,13 @@ table th {
 table {
   background-color: darkgrey;
   width: 100%;
+  min-width: 500px;
   border-collapse: collapse;
+}
+
+.container-table{
+  width: 100%;
+  overflow:auto !important;
 }
 
 /* Estilo para los bordes */

@@ -75,3 +75,21 @@ input.clicked {
   background-color: #ff5722; /* Cambia esto al color que desees */
   color: white; /* Asegúrate de que el texto sea legible */
 }
+
+@media screen and (max-width: 500px) {
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0px;
+  }
+
+}
